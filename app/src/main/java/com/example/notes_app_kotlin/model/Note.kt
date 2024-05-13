@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Entity(tableName = "notes")
+//passing instances between activities and fragments
 @Parcelize
 data class Note(
     @PrimaryKey(autoGenerate = true)

@@ -38,6 +38,7 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
 
     }
 
+    //View initialization: sets up menu handling, and retrieves the NoteViewModel from the MainActivity
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -48,6 +49,7 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
         addNoteView = view
     }
 
+    //Note saving
     private fun saveNote(view: View){
         val noteTile = binding.addNoteTitle.text.toString().trim()
         val noteDesc = binding.addNoteDesc.text.toString().trim()
@@ -64,6 +66,7 @@ class AddNoteFragment : Fragment(R.layout.fragment_add_note), MenuProvider {
         }
     }
 
+    //Menu handling
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
        menu.clear()
         menuInflater.inflate(R.menu.menu_add_note, menu)
